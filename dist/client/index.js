@@ -10,3 +10,4 @@ const App = () => {
         react_1.default.createElement("h1", null, "Hello, this is a blog")));
 };
 react_dom_1.default.render(react_1.default.createElement(App, null), document.getElementById('root'));
+
