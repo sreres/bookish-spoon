@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 
 const App: React.FC = () => {
     return (
@@ -9,4 +10,9 @@ const App: React.FC = () => {
     );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;
+
+const root = document.getElementById('root');
+if (root) {
+  ReactDOM.createRoot(root).render(<App />);
+}

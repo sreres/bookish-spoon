@@ -7,7 +7,8 @@
     "start": "node dist/server.js",
     "build": "tsc",
     "dev": "concurrently \"nodemon --watch src -e ts,tsx --exec \\\"ts-node\\\" src/server.ts\" \"webpack --watch --mode=development\"",
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test:client": "jest --config jest.config.client.js",
+    "test:server": "jest --config jest.config.server.js"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,13 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.0",
     "@types/react": "^18.0.31",
-    "@types/react-dom": "^18.0.11"
+    "@types/react-dom": "^18.0.11",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.0.5"
   }
 }
