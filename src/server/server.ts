@@ -7,6 +7,8 @@ app.get('/', (req: Request, res: Response) => {
     res.send('Hello, Personal Blog');
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log('Server is running at ...')
 })
+
+export default server;
