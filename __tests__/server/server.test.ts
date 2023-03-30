@@ -1,8 +1,9 @@
 import request from 'supertest';
 import app from '../../src/server/server';
+import { Server } from 'http';
 
 describe('Server', () => {
-  let server;
+  let server: Server;
 
   beforeAll(() => {
     server = app.listen(3000);
